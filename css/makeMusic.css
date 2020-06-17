@@ -89,47 +89,74 @@ li:nth-of-type(2){
 } */
 
 /* preloader */
-  
-#preloader span{
-	display: inline-block;
-	border-radius: 100%;
-	background-color: rgba(1, 77, 178, 1);
-	opacity: 0;
+.loader {
+    margin: 0 auto;
+    width: 60px;
+    height: 50px;
+    text-align: center;
+    font-size: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+  }
+  .loader > div {
+    height: 100%;
+    width: 8px;
+    display: inline-block;
+    float: left;
+    margin-left: 2px;
+    -webkit-animation: delay 0.8s infinite ease-in-out;
+    animation: delay 0.8s infinite ease-in-out;
+  }
+  .loader .bar1 {
+    background-color: #754fa0;
+  }
+  .loader .bar2 {
+    background-color: #09b7bf;
+    -webkit-animation-delay: -0.7s;
+    animation-delay: -0.7s;
+  }
+  .loader .bar3 {
+    background-color: #90d36b;
+    -webkit-animation-delay: -0.6s;
+    animation-delay: -0.6s;
+  }
+  .loader .bar4 {
+    background-color: #f2d40d;
+    -webkit-animation-delay: -0.5s;
+    animation-delay: -0.5s;
+  }
+  .loader .bar5 {
+    background-color: #fcb12b;
+    -webkit-animation-delay: -0.4s;
+    animation-delay: -0.4s;
+  }
+  .loader .bar6 {
+    background-color: #ed1b72;
+    -webkit-animation-delay: -0.3s;
+    animation-delay: -0.3s;
   }
   
-  #preloader span:nth-child(1){
-	margin-right: -5px;
-	 width: 15px;
-	height: 15px;
-	animation: opacitychange 1s ease-in-out 0.22s infinite;
+  @-webkit-keyframes delay {
+    0%, 40%, 100% {
+      -webkit-transform: scaleY(0.05);
+    }
+    20% {
+      -webkit-transform: scaleY(1);
+    }
   }
-  
-  #preloader span:nth-child(2){
-	 width: 25px;
-	height: 25px;
-	margin-bottom: 17px;
-	animation: opacitychange 1s ease-in-out 0.44s infinite;
-  }
-  
-  #preloader span:nth-child(3){
-	width: 35px;
-	height: 35px;
-	margin-bottom: 8px;
-	margin-left: 3px;
-	animation: opacitychange 1s ease-in-out 0.88s infinite;
+  @keyframes delay {
+    0%, 40%, 100% {
+      transform: scaleY(0.05);
+      -webkit-transform: scaleY(0.05);
+    }
+    20% {
+      transform: scaleY(1);
+      -webkit-transform: scaleY(1);
+    }
   }
 
-  
-  @keyframes opacitychange{
-	0%, 100%{
-	  opacity: 0;
-	}
-  
-	60%{
-	  opacity: 1;
-	}
-  }
-  
   #overlay{
 	height:100vh;
 	width:100vw;
@@ -144,5 +171,3 @@ li:nth-of-type(2){
 	-ms-transition: all 2s ease;  
 	transition: all 2s ease;
    }
-
-
