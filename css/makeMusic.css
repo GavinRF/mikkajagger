@@ -84,9 +84,9 @@ li:nth-of-type(2){
     filter: contrast(1.15);
 }
 
-@media and screensize(440px){
+/* @media and screensize(440px){
     p{font-size: 5em}
-}
+} */
 
 /* preloader */
   
