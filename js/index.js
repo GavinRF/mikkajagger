@@ -8,6 +8,6 @@ window.addEventListener('load', function(){
      overlay.style.transitionTimingFunction = 'ease-in-out';
      overlay.style.transition = 'all .8s'; 
  
-    // $("#preloader").fadeOut(4000); 
+    $("#preloader").fadeOut(4000); 
  
  });
